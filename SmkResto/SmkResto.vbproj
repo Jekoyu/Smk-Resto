@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EB2BDA98-B333-4986-9AFB-73D77450CCE2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SmkResto.My.MyApplication</StartupObject>
+    <StartupObject>SmkResto.ManageEmployee</StartupObject>
     <RootNamespace>SmkResto</RootNamespace>
     <AssemblyName>SmkResto</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -53,6 +53,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,11 +74,59 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="ChngPwd.Designer.vb">
+      <DependentUpon>ChngPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChngPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control.vb" />
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logout.Designer.vb">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEmployee.Designer.vb">
+      <DependentUpon>ManageEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Managemember.Designer.vb">
+      <DependentUpon>Managemember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Managemember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMenu.Designer.vb">
+      <DependentUpon>ManageMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,13 +144,76 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Order.Designer.vb">
+      <DependentUpon>Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repor.Designer.vb">
+      <DependentUpon>Repor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Repor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOrder.Designer.vb">
+      <DependentUpon>ViewOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ChngPwd.resx">
+      <DependentUpon>ChngPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout.resx">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEmployee.resx">
+      <DependentUpon>ManageEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Managemember.resx">
+      <DependentUpon>Managemember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMenu.resx">
+      <DependentUpon>ManageMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repor.resx">
+      <DependentUpon>Repor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrder.resx">
+      <DependentUpon>ViewOrder.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
